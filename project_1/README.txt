@@ -1,6 +1,6 @@
-Projet1 : Web Scraping
+Project 1 : Web Scraping + Telegram bot
 
-In this project, we retrieve the price of a cryptocurrency by scrapping coingecko.com
+In this project, we retrieve the price of a cryptocurrency by scrapping coingecko.com (exemple: https://www.coingecko.com/en/coins/bitcoin)
 
 1) We can run the script 'manual_scraper.sh' manually and retrieve the current price (in usd) of the cryptocurrency we want, by specifying
 its symbol (btc, eth, ...)
