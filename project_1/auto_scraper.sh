@@ -15,8 +15,12 @@ function print(){
 }
 function send(){
 
-        curl -s "https://api.telegram.org/bot5605775877:AAEHetqxBeeG2soFBFBIZ_zIss5VaiJ9Q5A/sendMessage?chat_id=1796336770&text=The_price_of-Bitcoin_is_$val"
+        telegram_api_url=$(head -n 1 telegram_api_url.txt)
+        date_now="$(date +'%d/%m/%Y')"
+        hour_now="$(date +'%H:%M:%S')"
+        curl -s "$telegram_api_url&text=The%20price%20of%20$coin%20is%20$val%20($date_now%20$hour_now)"
 }
+
 
 url='https://www.coingecko.com/en/coins/bitcoin'
 output=price.txt
