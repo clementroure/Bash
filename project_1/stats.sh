@@ -30,7 +30,8 @@ function send(){
 
         telegram_api_url=$(head -n 1 telegram_api_url.txt)
         date_now="$(date +'%d/%m/%Y')"
-        curl -s "$telegram_api_url&text=Bitcoin%20report%20of%20$date_now:%08average price:%20$moy%08min%20price:%20$min%08max%20price:%20$max$%08volatility:%20$volatility"
-}
+        curl -s "$telegram_api_url&text=Bitcoin%20report%20of%20$date_now:%0A%0AAverage%20price:%20$moy%20usd%0AMin%20price:%20$min%20usd%0AMax%20price:%20$max%20usd%0AVolatility:%20$volatility" 
+} 
 
 send
+rm prices.txt
