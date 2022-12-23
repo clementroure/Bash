@@ -7,6 +7,7 @@ its symbol (btc, eth, ...)
 
 2) The 2nd script 'auto_scraper.sh' is hosted on an Digital Ocean linux-based VM. 
 Thanks to the command $sudo crontab -e  we can setup a config file:
-0 17 * * * /usr/bin/bash /root/esilv/auto_scraper.sh
+0 * * * * /usr/bin/bash /root/esilv/auto_scraper.sh
+0 15 * * * /usr/bin/bash /root/esilv/stats.sh
 
-auto_scraper.sh will send a message with the bitcoin price in usd, everyday at 5pm, via a Telegram bot.
+auto_scraper.sh will send a message with the bitcoin price in usd, everyday at 3pm, via a Telegram bot.

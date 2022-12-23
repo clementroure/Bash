@@ -1,0 +1,23 @@
+<?php
+if( isset($_GET['submit']) )
+{
+    $threshold = htmlentities($_GET['val1']);
+    exec("./btn.sh $treshold");
+}
+?>
+
+
+<html>
+<head>
+<link rel="stylesheet" href="dark-theme.css">   
+</head>
+<body>
+<h1>Bitcoin Price Watcher</h1>
+<p>@steeve549_bot on Telegram will send you an alert notification if the price drop more than the treshold limit in 24H.</p>
+<form action="" method="get">
+    Threshold limit in % (5 is the default value):
+    <input type="number" value="5"  max="99" min="1"  name="val1" id="val1"></input>
+    <input type="submit" name="submit" value="confirm"></input>
+</form>
+</body>
+</html>
